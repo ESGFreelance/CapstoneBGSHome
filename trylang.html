@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Leaflet Routing Machine Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+<h1 align="center">PROPERTY OF GROUP BGS MAPUA UNIVERSITY</center>
+<h3 align="center">DUMMY PROTOTYPE </center>
+<h4 align="center">DEVELOPED BY EDWARD GARCIA</center>
+<h4 align="center">TERRATECH PHILIPPINES</center>
+<h4 align="center">Prototype # 130 Functionality 5 of 30</center>
+
+    <div id="map" class="map" style="width:100%; height:700px"></div>
+
+</body>
+</html>
+
+<script>
+var map = L.map('map');
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+L.Routing.control({
+  waypoints: [
+    L.latLng(14.565094, 121.041927),
+    L.latLng(14.562267, 121.021597),
+  L.latLng(8.018602, 124.298071)
+
+  ]
+}).addTo(map);
+$('.leaflet-control-attribution').hide();
+
+
+</script>
